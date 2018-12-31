@@ -62,6 +62,7 @@
     &__medium-8--smaller {
       width: 63%;
     }
+
   }
 
   @mixin atLarge {
@@ -92,10 +93,10 @@
     &__large-8--smaller {
       width: 63%;
     }
+
   }
-
-
-  /* Begin Equal Height Rues */
+  
+  /* Begin Equal Height Rules */
   &--equal-height-at-medium {
     @mixin atMedium {
       display: flex;
@@ -105,6 +106,7 @@
       float: none;
       display: flex;
     }
+
   }
 
   &--equal-height-at-large {
@@ -116,6 +118,7 @@
       float: none;
       display: flex;
     }
+
   }
 
 }
