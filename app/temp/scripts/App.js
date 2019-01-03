@@ -11093,10 +11093,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 "use strict";
 
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 var _MobileMenu = __webpack_require__(3);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
@@ -11104,6 +11100,10 @@ var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 var _RevealOnScroll = __webpack_require__(4);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
 
 var _StickyHeader = __webpack_require__(5);
 
@@ -11116,8 +11116,8 @@ var _Modal2 = _interopRequireDefault(_Modal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
-var revealOnScroll = new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
-var revealOnScroll = new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
+new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
+new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
 var stickyHeader = new _StickyHeader2.default();
 var modal = new _Modal2.default();
 
@@ -11280,7 +11280,7 @@ var StickyHeader = function () {
   _createClass(StickyHeader, [{
     key: 'refreshWaypoints',
     value: function refreshWaypoints() {
-      this.lazyImages.on('load', function () {
+      this.lazyImages.load(function () {
         Waypoint.refreshAll();
       });
     }
@@ -11321,6 +11321,7 @@ var StickyHeader = function () {
           },
           offset: "18%"
         });
+
         new Waypoint({
           element: currentPageSection,
           handler: function handler(direction) {
@@ -11744,8 +11745,10 @@ var Modal = function () {
     value: function events() {
       // clicking the open modal button
       this.openModalButton.click(this.openModal.bind(this));
+
       // clicking the x close modal button
       this.closeModalButton.click(this.closeModal.bind(this));
+
       // pushes any key
       (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
     }
@@ -11766,7 +11769,6 @@ var Modal = function () {
     key: "closeModal",
     value: function closeModal() {
       this.modal.removeClass("modal--is-visible");
-      return false;
     }
   }]);
 

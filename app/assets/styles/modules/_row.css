@@ -23,8 +23,8 @@
   }
 
   &--gutters-large > div {
-  }
     padding-right: 100px;
+  }
 
   &--gutters-small > div {
     padding-right: 45px;
@@ -95,7 +95,7 @@
     }
 
   }
-
+  
   /* Begin Equal Height Rules */
   .flexbox &--equal-height-at-medium {
     @mixin atMedium {

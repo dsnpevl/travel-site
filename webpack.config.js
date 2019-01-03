@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: {
@@ -6,7 +6,7 @@ module.exports = {
     Vendor: "./app/assets/scripts/Vendor.js"
   },
   output: {
-    path: path.resolve(__dirname, "./app/temp/scripts"),
+	path: path.resolve(__dirname, './app/temp/scripts'),
     filename: "[name].js"
   },
   module: {

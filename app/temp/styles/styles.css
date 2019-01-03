@@ -546,14 +546,6 @@ a {
   }
   }
 
-.flexbox .example-element {
-  padding: 10px;
-}
-
-.cssanimations .some-other-element {
-  margin: 10px;
-}
-
 .btn {
   background-color: #2f5572;
   color: #FFF;
@@ -684,7 +676,7 @@ a {
 
 @media (min-width: 1010px) {
       .page-section--testimonials.lazyloaded {
-        background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+        background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
         background-size: cover;
       }
   }
@@ -747,11 +739,6 @@ a {
     margin-top: 0;
   }
 
-.row {
-    padding-right: 100px;
-
-}
-
 .row::after {
     content: "";
     clear: both;
@@ -779,6 +766,7 @@ a {
   }
 
 .row--gutters-large > div {
+    padding-right: 100px;
   }
 
 .row--gutters-small > div {
@@ -1040,11 +1028,11 @@ a {
 Instead edit gulp/templates/sprite */
 
 .icon {
-      background-image: url('/assets/images/sprites/sprite-e79e95cc.svg');
+      background-image: url('../../assets/images/sprites/sprite-e79e95cc.svg');
     }
 
 .no-svg .icon {
-      background-image: url('/assets/images/sprites/sprite-e79e95cc.png');
+      background-image: url('../../assets/images/sprites/sprite-e79e95cc.png');
     }
 
 .icon--clear-view-escapes {
@@ -1148,11 +1136,10 @@ Instead edit gulp/templates/sprite */
   z-index: 2;
   -webkit-transition: background-color .3s ease-out;
   transition: background-color .3s ease-out;
-
 }
 
 .site-header--is-expanded {
-    background-color: rgba(47,85,114, 0.55);
+    background-color: rgba(47,85,114, .55);
   }
 
 @media (min-width: 800px) {
@@ -1160,7 +1147,6 @@ Instead edit gulp/templates/sprite */
 .site-header {
     position: fixed;
     background-color: rgba(47,85,114, .3)
-
 }
 
     .site-header--dark {
@@ -1172,7 +1158,6 @@ Instead edit gulp/templates/sprite */
 
 .site-header__btn-container {
       float: right
-
   }
   }
 
@@ -1214,9 +1199,9 @@ Instead edit gulp/templates/sprite */
     width: 20px;
     height: 19px;
     position: absolute;
+    z-index: 10;
     top: 10px;
     right: 10px;
-    z-index: 10;
   }
 
 .site-header__menu-icon::before {
@@ -1229,8 +1214,10 @@ Instead edit gulp/templates/sprite */
       background-color: #FFF;
       -webkit-transform-origin: 0 0;
               transform-origin: 0 0;
-      -webkit-transition: all .3s ease-out;
-      transition: all .3s ease-out;
+      -webkit-transition: -webkit-transform .3s ease-out;
+      transition: -webkit-transform .3s ease-out;
+      transition: transform .3s ease-out;
+      transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     }
 
 .site-header__menu-icon__middle {
@@ -1240,8 +1227,8 @@ Instead edit gulp/templates/sprite */
       width: 20px;
       height: 3px;
       background-color: #FFF;
-      -webkit-transition: opacity .3s ease-out;
-      transition: opacity .3s ease-out;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
       -webkit-transform-origin: 0 50%;
               transform-origin: 0 50%;
     }
@@ -1289,8 +1276,8 @@ Instead edit gulp/templates/sprite */
     opacity: 0;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
-    -webkit-transition: all .3s easy-out;
-    transition: all .3s easy-out;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
     position: relative;
     z-index: -10;
     padding-top: 90px;
@@ -1316,7 +1303,6 @@ Instead edit gulp/templates/sprite */
     }
 
 .primary-nav {
-
   padding-top: 10px;
 }
 
@@ -1354,7 +1340,7 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .primary-nav li {
-      padding-right: 20;
+      padding-right: 20px;
       float: left;
       display: block
   }
